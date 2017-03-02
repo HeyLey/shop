@@ -20,6 +20,7 @@
 <div class="product-preview-div">
     <jsp:getProperty name="product" property="name"/>
     <br/>
+    <!-- ссылка на карточку продукта -->
     <a href="/shop/<%= locale.getLanguage() %>">
         <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
     <br/>
