@@ -8,12 +8,13 @@
         <!--мой сервлет -->
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>org.leyla.MainServlet</servlet-class>
-        <init-param>
-            <param-name>default-tab</param-name>
-            <param-value>1</param-value>
-        </init-param>
-    </servlet>
-        <!--адрес-->
+    <!--параметры инициализации сервлета -->
+    <init-param>
+        <param-name>default-tab</param-name>
+        <param-value>1</param-value>
+    </init-param>
+</servlet>
+    <!--адрес-->
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/shop/*</url-pattern>

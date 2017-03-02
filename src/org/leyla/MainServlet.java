@@ -57,10 +57,12 @@ public class MainServlet extends HttpServlet {
 
         HashMap<String, Object> map = new HashMap<>();
 
+        //кнопка
         map.put("tab1_class", (defaultTab == 1) ? "class=\"current\"" : "");
         map.put("tab2_class", (defaultTab == 2) ? "class=\"current\"" : "");
         map.put("tab3_class", (defaultTab == 3) ? "class=\"current\"" : "");
 
+        //контент
         map.put("tab1_style", (defaultTab != 1) ? "style=\"display: none\"" : "");
         map.put("tab2_style", (defaultTab != 2) ? "style=\"display: none\"" : "");
         map.put("tab3_style", (defaultTab != 3) ? "style=\"display: none\"" : "");
