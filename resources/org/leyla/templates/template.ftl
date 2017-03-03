@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/tabs.js"></script>
+    <script>
+        function buyProduct(id) {
+            window.location.href = ("/basket.jsp?order_id=" + id);
+        }
+    </script>
 </head>
 <body>
 <ul class="top-menu">
@@ -65,13 +70,14 @@
             <li><a href="#4">Верхняя одежда</a></li>
             <li><a href="#5">Обувь</a></li>
         </ul>
+        <li><a href="/products_page.jsp">Все товары</a></li>
     </ul>
     <div class="data-container">
-        <img src="/dress.jpg" class="image-preview"/>
+        <img src="${product_image}" class="image-preview"/>
 
         <div class="content-container">
-            <div class="product-header">Платье BCBGMAXAZRIA</div>
-            <div class="price">72 000 руб</div>
+            <div class="product-header">${product_name}</div>
+            <div class="price">${product_price}</div>
             <div class="main-param">
                 Цвет: <select name="size">
                 <option value="r1">Коричневый</option>
@@ -83,7 +89,7 @@
                     <option value="r3">L</option>
                 </select><br/>
             </div>
-            <button type="button" id="buy">${buy_button}</button>
+            <button type="button" id="buy" onclick="buyProduct(${product_id})">${buy_button}</button>
         </div>
         <div id="tabs-container">
             <ul class="tabs-menu">
@@ -94,11 +100,7 @@
         </div>
         <div class="tab">
             <div id = "tab-1" class="tab-content" ${tab1_style}>
-                Платье BCBGMAXAZRIA выполнено из сетчатого текстиля с вышивкой.
-                Особенности:
-                подкладка, глубокий вырез на спинке,
-                застежка на молнию сзади,
-                вышивка металлической нитью.
+                ${product_description}
             </div>
             <div id = "tab-2" class="tab-content" ${tab2_style}>
                 Состав: Материал 1: Нейлон - 73%, Металлизированное волокно - 12%, Район - 9%, Спандекс - 4%, Модал - 2%;

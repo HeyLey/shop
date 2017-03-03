@@ -21,7 +21,7 @@
     <jsp:getProperty name="product" property="name"/>
     <br/>
     <!-- ссылка на карточку продукта -->
-    <a href="/shop/<%= locale.getLanguage() %>">
+    <a href="/shop/<%= locale.getLanguage() %>?id=<jsp:getProperty name="product" property="id"/>">
         <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
     <br/>
     <jsp:getProperty name="product" property="description"/>

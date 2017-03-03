@@ -83,6 +83,27 @@
 </ul>
 
 <div class="top-container">
+    <ul class="main-menu">
+        <li><a href="#women">Для женщин</a></li>
+        <ul class="sub-menu">
+            <li><a href="#1">Платья</a></li>
+            <li><a href="#2">Юбки</a></li>
+            <li><a href="#3">Блузки</a></li>
+            <li><a href="#4">Верхняя одежда</a></li>
+            <li><a href="#5">Обувь</a></li>
+        </ul>
+        <li><a href="#man">Для мужчин</a></li>
+        <ul class="sub-menu">
+            <li><a href="#1">Костюмы</a></li>
+            <li><a href="#2">Брюки</a></li>
+            <li><a href="#3">Рубашки</a></li>
+            <li><a href="#4">Верхняя одежда</a></li>
+            <li><a href="#5">Обувь</a></li>
+        </ul>
+        <li><a href="/products_page.jsp">Все товары</a></li>
+    </ul>
+</div>
+<div class="data-container">
     <p>Фильтр: <input id="filter_input" type="text" value="<%= query != null ? query : ""%>"/></p>
     <div id="products-list">
         <jsp:include page="/products_list.jsp"/>

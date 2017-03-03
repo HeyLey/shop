@@ -12,12 +12,16 @@ public class ProductsProvider {
 
     static {
         allProducts = Arrays.asList(
-                new Product(1, "Трусы", "Описание", 100, "/img/img1.jpg"),
-                new Product(2, "Майка", "Описание", 100, "/img/img2.jpg"),
-                new Product(3, "Фуфайка", "Описание", 100, "/img/img3.jpg"),
-                new Product(4, "Трусы", "Описание", 100, "/img/img4.jpg"),
-                new Product(5, "Майка", "Описание", 100, "/img/img5.jpg"),
-                new Product(6, "Фуфайка", "Описание", 100, "/img/img6.jpg"));
+                new Product(1, "Трусы", "Описание", 100, "/img/img10.png"),
+                new Product(2, "Майка", "Описание", 100, "/img/img11.png"),
+                new Product(3, "Фуфайка", "Описание", 100, "/img/img12.png"),
+                new Product(4, "Трусы", "Описание", 100, "/img/img16.png"),
+                new Product(5, "Майка", "Описание", 100, "/img/img17.png"),
+                new Product(6, "Фуфайка", "Описание", 100, "/img/img18.png"),
+                new Product(1, "Трусы", "Описание", 100, "/img/img22.png"),
+                new Product(2, "Майка", "Описание", 100, "/img/img23.png"),
+                new Product(3, "Фуфайка", "Описание", 100, "/img/img24.png")
+        );
     }
 
 
