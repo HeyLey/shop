@@ -47,7 +47,9 @@
             <li><a href="/shop/de" class="dropdown-top">Deutsch</a></li>
         </div>
         <div class="corb">
-            <li><a class="dropdown-top">Moя корзина</a></li>
+            <li><a class="dropdown-top">Вход</a></li>
+            <li><a class="dropdown-top">Корзина</a></li>
+            <li><a class="dropdown-top">История</a></li>
         </div>
     </div>
 </ul>
@@ -73,14 +75,16 @@
         <li><a href="/products_page.jsp">Все товары</a></li>
     </ul>
     <div class="data-container">
-        <img src="${product_image}" class="image-preview"/>
+        <img src="${product_image2}" class="image-preview"/>
 
         <div class="content-container">
             <div class="product-header">${product_name}</div>
             <div class="price">${product_price}</div>
             <div class="main-param">
                 Цвет: <select name="size">
-                <option value="r1">Коричневый</option>
+                <option value="r1">${product_color}</option>
+                <option value="r2">${product_color2}</option>
+                <option value="r3">${product_color3}</option>
             </select><br/>
                 Размер:
                 <select name="size">
@@ -103,29 +107,7 @@
                 ${product_description}
             </div>
             <div id = "tab-2" class="tab-content" ${tab2_style}>
-                Состав: Материал 1: Нейлон - 73%, Металлизированное волокно - 12%, Район - 9%, Спандекс - 4%, Модал - 2%;
-                Материал 2: Полиэстер - 100%
-                Материал подкладки: Полиэстер - 90%, Спандекс - 10%
-                Длина рукава: 20 см
-                Длина: 135 см
-                Размер модели на фото: 44
-                Рост модели на фото: 178
-                Параметры модели: 85-61-92
-                Длина: макси
-                Рукав: короткий
-                Застежка: на молнии
-                Цвет: золотой
-                Сезон: Мульти
-                Стиль: Выход в свет
-                Коллекция: Осень-зима
-                Детали одежды: вышивка, сетка
-                Узор: Другое
-                Вырез/воротник: Круглый
-                Тип размера: Стандартный
-                Тип платья: Приталенное
-                Назначение платья: Для особого случая
-                Подкладка: 1
-                Артикул: BC529EWJAV98
+                ${product_description}
             </div>
             <div id = "tab-3" class="tab-content" ${tab3_style}>
                 tab-3

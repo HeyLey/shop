@@ -8,18 +8,26 @@ public class Product implements Serializable {
     private int id;
     private String name;
     private String description;
-    private double price;
+   // private String description_;
+    private int price;
     private String img;
+    private String img_;
+    String[] colors = new String[3];
 
     public Product() {
     }
 
-    public Product(int id, String name, String description, double price, String img) {
+    public Product(int id, String name, String description, /*String description_,*/ int price, String img, String img_, String color1, String color2, String color3) {
         this.id = id;
         this.name = name;
         this.description = description;
+      //  this.description = description_;
         this.price = price;
         this.img = img;
+        this.img_ = img_;
+        colors[0] = color1;
+        colors[1] = color2;
+        colors[2] = color3;
     }
 
     public int getId() {
@@ -34,13 +42,25 @@ public class Product implements Serializable {
         return price;
     }
 
+    public String getPriceString() {
+        return Integer.toString(price) + " руб." ;
+    }
+
     public String getImg() {
         return img;
+    }
+
+    public String getImg_() {
+        return img_;
     }
 
     public String getDescription() {
         return description;
     }
+
+    //public String getDescription_() {
+      //  return description_;
+    //}
 
     public void setDescription(String description) {
         this.description = description;
@@ -54,11 +74,19 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public void setColors(int i) {
+        this.colors[i] = colors[i];
+    }
+
+    public String getColor(int i) {
+        return colors[i];
     }
 }

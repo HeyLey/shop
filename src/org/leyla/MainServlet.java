@@ -62,8 +62,13 @@ public class MainServlet extends HttpServlet {
         map.put("product_id", product.getId());
         map.put("product_name", product.getName());
         map.put("product_description", product.getDescription());
-        map.put("product_price", product.getPrice());
+        map.put("product_price", product.getPriceString());
         map.put("product_image", product.getImg());
+        map.put("product_image2", product.getImg_());
+        map.put("product_color", product.getColor(0));
+        map.put("product_color2", product.getColor(1));
+        map.put("product_color3", product.getColor(2));
+        //map.put("product_description2", product.getDescription_());
 
         map.put("tab1_class", (defaultTab == 1) ? "class=\"current\"" : "");
         map.put("tab2_class", (defaultTab == 2) ? "class=\"current\"" : "");
