@@ -52,7 +52,8 @@ public class MainServlet extends HttpServlet {
     }
 
     private Map<String, Object> fillData(Locale locale, int id) {
-        int defaultTab = Integer.valueOf(getInitParameter("default-tab"));
+       // int defaultTab = Integer.valueOf(getInitParameter("default-tab"));
+        int defaultTab = Integer.valueOf(getServletContext().getInitParameter("default-tab"));
         ResourceBundle myres = ResourceBundle.getBundle("messages", locale);
 
         Product product = ProductsProvider.getProduct(id);

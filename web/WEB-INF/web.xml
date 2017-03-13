@@ -8,12 +8,14 @@
         <!--мой сервлет -->
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>org.leyla.MainServlet</servlet-class>
+    </servlet>
+
     <!--параметры инициализации сервлета -->
-    <init-param>
+    <context-param>
         <param-name>default-tab</param-name>
         <param-value>1</param-value>
-    </init-param>
-</servlet>
+    </context-param>
+
     <!--адрес-->
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>

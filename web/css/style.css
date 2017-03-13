@@ -237,3 +237,8 @@ ul.top-menu a:hover {
 .tab-content {
     display: block;
 }
+
+
+.big-text {
+    font-size: 30px;
+}

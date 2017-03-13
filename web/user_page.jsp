@@ -13,12 +13,12 @@
         <c:choose>
             <c:when test="${not empty pageContext.request.userPrincipal}">
                 <li>
-                    <a>Пользователь: ${pageContext.request.userPrincipal.name}</a>
+                    <a href="/secured/personal_cabinet.jsp">Пользователь: ${pageContext.request.userPrincipal.name}</a>
                 </li>
                 <li><a href="/secured/logout.jsp">Выход</a></li>
             </c:when>
             <c:otherwise>
-                <li><a href="/secured/login.jsp">Вход</a></li>
+                <li><a href="/secured/personal_cabinet.jsp">Вход</a></li>
             </c:otherwise>
         </c:choose>
         <li><a href="/basket.jsp">Корзина</a></li>
