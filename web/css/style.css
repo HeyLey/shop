@@ -61,7 +61,7 @@
 }
 
 .lang {
-    margin-left: 60%;
+    margin-left: 40%;
 }
 
 .corb {
@@ -79,7 +79,6 @@
 
 .basket {
     display: block;
-    text-align: center;
 }
 
 .tabs-menu {
@@ -228,7 +227,7 @@ ul.top-menu a:hover {
 }
 
 .about {
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .dropdown-top {
