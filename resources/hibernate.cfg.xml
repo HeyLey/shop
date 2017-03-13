@@ -1,0 +1,20 @@
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <!--встроенная бд-->
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <!--/-->
+
+        <property name="hibernate.connection.url">jdbc:hsqldb:file:marketdb/db</property>
+        <property name="hibernate.connection.username">SA</property>
+        <!-- автоматическое создание таблиц-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!--/-->
+
+        <!--ссылка на мапинг-->
+        <mapping resource="history.hbm.xml"/>
+
+    </session-factory>
+
+</hibernate-configuration>
