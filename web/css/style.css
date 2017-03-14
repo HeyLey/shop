@@ -77,6 +77,14 @@
     font-size: 22px;
 }
 
+.size_tab {
+    margin-top: 20px;
+    position: relative;
+    margin-right: 70px;
+    float: right;
+    font-size: 18px;
+}
+
 .basket {
     display: block;
 }
@@ -241,4 +249,9 @@ ul.top-menu a:hover {
 
 .big-text {
     font-size: 30px;
+}
+
+.simple-text {
+    font-family: "Arial";
+    font-size: 15px;
 }

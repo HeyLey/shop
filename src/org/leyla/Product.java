@@ -13,11 +13,12 @@ public class Product implements Serializable {
     private String img;
     private String img_;
     String[] colors = new String[3];
+    String[] sizes = new String[3];
 
     public Product() {
     }
 
-    public Product(int id, String name, String description, /*String description_,*/ int price, String img, String img_, String color1, String color2, String color3) {
+    public Product(int id, String name, String description, /*String description_,*/ int price, String img, String img_, String color1, String color2, String color3, String s1, String s2, String s3) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -28,6 +29,9 @@ public class Product implements Serializable {
         colors[0] = color1;
         colors[1] = color2;
         colors[2] = color3;
+        sizes[0] = s1;
+        sizes[1] = s2;
+        sizes[2] = s3;
     }
 
     public int getId() {
@@ -82,8 +86,16 @@ public class Product implements Serializable {
         this.img = img;
     }
 
-    public void setColors(int i) {
+    public void setColor(int i) {
         this.colors[i] = colors[i];
+    }
+
+    public void setSize(int i) {
+        this.sizes[i] = sizes[i];
+    }
+
+    public String getSize(int i) {
+        return sizes[i];
     }
 
     public String getColor(int i) {

@@ -69,6 +69,9 @@ public class MainServlet extends HttpServlet {
         map.put("product_color", product.getColor(0));
         map.put("product_color2", product.getColor(1));
         map.put("product_color3", product.getColor(2));
+        map.put("s1", product.getSize(0));
+        map.put("s2", product.getSize(1));
+        map.put("s3", product.getSize(2));
         //map.put("product_description2", product.getDescription_());
 
         map.put("tab1_class", (defaultTab == 1) ? "class=\"current\"" : "");
@@ -80,6 +83,8 @@ public class MainServlet extends HttpServlet {
         map.put("tab3_style", (defaultTab != 3) ? "style=\"display: none\"" : "");
 
         map.put("buy_button", myres.getString("BUY_BUTTON"));
+
+
 
         return map;
     }

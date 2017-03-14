@@ -90,10 +90,13 @@
             </select><br/>
                 Размер:
                 <select name="size">
-                    <option value="r1">S</option>
-                    <option value="r2">M</option>
-                    <option value="r3">L</option>
+                    <option value="r1">${s1}</option>
+                    <option value="r2">${s2}</option>
+                    <option value="r3">${s3}</option>
                 </select><br/>
+            </div>
+            <div class = "size_tab">
+                <a href="/size_table.jsp">Таблица размеров</a>
             </div>
             <button type="button" id="buy" onclick="buyProduct(${product_id})">${buy_button}</button>
         </div>

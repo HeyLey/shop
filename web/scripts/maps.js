@@ -12,28 +12,28 @@ function init() {
     });
 
     var shop1 = new ymaps.Placemark([59.984008, 30.351001], {
-        balloonContent: 'Магазин 1',
-        iconCaption: 'Харченко 19'
+        balloonContent: 'IMyMeShop',
+        iconCaption: 'ул. Харченко, 19'
     }, {
         preset: 'islands#greenDotIcon'
     });
 
     shop1.events.add(['balloonopen'
     ], function (e) {
-        $("#shop_addres").text("Харченко 19");
+        $("#shop_addres").text("ул. Харченко, 19");
         shop_id = 1;
     });
 
     var shop2 = new ymaps.Placemark([59.970614, 30.318572], {
-        balloonContent: 'Магазин 2',
-        iconCaption: 'ул. Профессора Попова 4'
+        balloonContent: 'IMyMeShop',
+        iconCaption: 'ул. Профессора Попова, 4'
     }, {
         preset: 'islands#greenDotIcon'
     });
 
     shop2.events.add(['balloonopen'
     ], function (e) {
-        $("#shop_addres").text("ул. Профессора Попова 4");
+        $("#shop_addres").text("ул. Профессора Попова, 4");
         shop_id = 2;
     });
 
