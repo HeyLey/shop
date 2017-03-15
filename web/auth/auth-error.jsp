@@ -4,6 +4,10 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Ошибка авторизации</h1>
+<pre>
+
+    <h1>  Ошибка авторизации</h1>
+
+    <a href="auth.jsp">Попробуйте снова</a> </pre>
 </body>
 </html>

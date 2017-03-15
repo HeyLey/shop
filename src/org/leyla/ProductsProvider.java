@@ -11,7 +11,6 @@ public class ProductsProvider {
     private static List<Product> allProducts;
 
     static {
-        //TODO: заполнить ProductInfo
         allProducts = Arrays.asList(
                 new Product(1, "Дубленка Mondial", "59 999 руб.", 59999, "/img/img10.png", "/img/img10.jpg", "Зеленый", "Коричневый", "Красный", "S", "M", "L"),
                 new Product(2, "Куртка кожаная Karl Lagerfeld", "64 999 руб.", 64999, "/img/img11.png","/img/img11.jpg", "Серебристый", "Золотой", "Бронза", "S", "M", "L"),
