@@ -5,27 +5,27 @@
         <li class="dropdown-top">
             <a class="dropdown-top" href="/">О компании</a>
             <ul class="dropdown-inside">
-                <li><a href="/">Услуги</a></li>
-                <li><a href="/">Оферта</a></li>
-                <li><a href="/">Центр поддержки</a></li>
-                <li><a href="/">Контакты</a></li>
-                <li><a href="/">Вакансии</a></li>
+                <li><a href="/services.jsp">Услуги</a></li>
+                <li><a href="/offer.jsp">Оферта</a></li>
+                <li><a href="/support.jsp">Центр поддержки</a></li>
+                <li><a href="/contacts.jsp">Контакты</a></li>
+                <li><a href="/job.jsp">Вакансии</a></li>
             </ul>
         </li>
 
         <li class="dropdown-top">
             <a class="dropdown-top" href="/">Доставка</a>
             <ul class="dropdown-inside">
-                <li><a href="/">Условия доставки</a></li>
-                <li><a href="/">Доступные регионы</a></li>
+                <li><a href="/delivery.jsp">Условия доставки</a></li>
+                <li><a href="/regions.jsp">Доступные регионы</a></li>
             </ul>
         </li>
 
         <li class="dropdown-top">
             <a class="dropdown-top" href="/">Возврат</a>
             <ul class="dropdown-inside">
-                <li><a href="/">Условия возврата</a></li>
-                <li><a href="/">Как оформить</a></li>
+                <li><a href="/return.jsp">Условия возврата</a></li>
+                <li><a href="/conditions.jsp">Как оформить</a></li>
             </ul>
         </li>
         <div class="lang">

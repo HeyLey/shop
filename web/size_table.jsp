@@ -12,7 +12,7 @@
         <div class=simple-text>
             <pre>
                 <strong>
-                Таблицы размеров
+                ТАБЛИЦЫ РАЗМЕРОВ
                 </strong>
 
                 <img src="/img/size_table.png"/>
