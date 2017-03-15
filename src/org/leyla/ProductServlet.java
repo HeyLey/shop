@@ -16,21 +16,17 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 
-public class MainServlet extends HttpServlet {
+public class ProductServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
 
-        String uri = request.getRequestURI();
         Locale locale = new Locale("ru");
 
-        if (uri.startsWith("/shop/en")) {
-            locale = Locale.ENGLISH;
-        }
-
-        if (uri.startsWith("/shop/de")) {
-            locale = Locale.GERMAN;
+        Object obj = request.getSession().getAttribute("locale");
+        if (obj != null) {
+            locale = (Locale) obj;
         }
 
         Integer id = Integer.valueOf(request.getParameter("id"));;
@@ -40,7 +36,7 @@ public class MainServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         Configuration cfg = new Configuration();
 
-        cfg.setClassForTemplateLoading(MainServlet.class, "templates");
+        cfg.setClassForTemplateLoading(ProductServlet.class, "templates");
 
         Template template = cfg.getTemplate("template.ftl");
 
@@ -49,6 +45,7 @@ public class MainServlet extends HttpServlet {
         } catch (TemplateException e) {
             throw new ServletException(e);
         }
+        out.close();
     }
 
     private Map<String, Object> fillData(Locale locale, int id) {
@@ -83,8 +80,6 @@ public class MainServlet extends HttpServlet {
         map.put("tab3_style", (defaultTab != 3) ? "style=\"display: none\"" : "");
 
         map.put("buy_button", myres.getString("BUY_BUTTON"));
-
-
 
         return map;
     }
