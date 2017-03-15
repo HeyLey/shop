@@ -42,7 +42,7 @@ public class Product implements Serializable {
         return name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
