@@ -16,9 +16,23 @@
 
 <div class="top-container">
     <jsp:include page="../main_menu.jsp"/>
-    <div class="data-container">
-        <div class="big-text"> Добро пожаловать, ${pageContext.request.userPrincipal.name} !</div>
-        <div> Номер вкладки поумолчанию: ${initParam["default-tab"]}</div>
+    <div class="data-container"> <pre>
+        <div class="big-text">
+     Добро пожаловать, ${pageContext.request.userPrincipal.name}!</div>
+        <div>
+        Номер вкладки по умолчанию: ${initParam["default-tab"]}</div>
+
+        <strong>
+
+        Ваше имя:</strong>  Курбацкая Лейла
+            <strong>
+        Телефон:</strong>   +7 (911) 752-9100
+            <strong>
+        E-mail:</strong>    hey.ley@yandex.ru
+            <strong>
+        Адрес:</strong>     г.Санкт-Петербург, Кушелевская дорога, д.5, к.3, кв.51
+
+        </pre>
         <div>
             <jsp:useBean id="orders" class="org.leyla.hibernate.OrdersHistory"/>
 

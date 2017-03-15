@@ -3,6 +3,7 @@ package org.leyla.hibernate;
 import javax.persistence.*;
 import java.io.Serializable;
 
+// конкретная покупка, в заказе несколько покупок
 @Entity
 @Table(name = "PURCHASE", uniqueConstraints = {@UniqueConstraint(columnNames = "ID"),})
 public class Purchase implements Serializable {

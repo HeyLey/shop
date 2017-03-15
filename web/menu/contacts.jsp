@@ -17,9 +17,9 @@
     </style>
 </head>
 <body>
-<jsp:include page="top_menu.jsp"/>
+<jsp:include page="../top_menu.jsp"/>
 <div class="top-container">
-    <jsp:include page="main_menu.jsp"/>
+    <jsp:include page="../main_menu.jsp"/>
     <div class="data-container">
         <div class=simple-text>
         <pre>

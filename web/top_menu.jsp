@@ -5,27 +5,27 @@
         <li class="dropdown-top">
             <a class="dropdown-top">О компании</a>
             <ul class="dropdown-inside">
-                <li><a href="/services.jsp">Услуги</a></li>
-                <li><a href="/offer.jsp">Оферта</a></li>
-                <li><a href="/support.jsp">Центр поддержки</a></li>
-                <li><a href="/contacts.jsp">Контакты</a></li>
-                <li><a href="/job.jsp">Вакансии</a></li>
+                <li><a href="/menu/services.jsp">Услуги</a></li>
+                <li><a href="/menu/offer.jsp">Оферта</a></li>
+                <li><a href="/menu/support.jsp">Центр поддержки</a></li>
+                <li><a href="/menu/contacts.jsp">Контакты</a></li>
+                <li><a href="/menu/job.jsp">Вакансии</a></li>
             </ul>
         </li>
 
         <li class="dropdown-top">
             <a class="dropdown-top">Доставка</a>
             <ul class="dropdown-inside">
-                <li><a href="/delivery.jsp">Условия доставки</a></li>
-                <li><a href="/regions.jsp">Доступные регионы</a></li>
+                <li><a href="/menu/delivery.jsp">Условия доставки</a></li>
+                <li><a href="/menu/regions.jsp">Доступные регионы</a></li>
             </ul>
         </li>
 
         <li class="dropdown-top">
             <a class="dropdown-top">Возврат</a>
             <ul class="dropdown-inside">
-                <li><a href="/return.jsp">Условия возврата</a></li>
-                <li><a href="/conditions.jsp">Как оформить</a></li>
+                <li><a href="/menu/return.jsp">Условия возврата</a></li>
+                <li><a href="/menu/conditions.jsp">Как оформить</a></li>
             </ul>
         </li>
         <div class="lang">
