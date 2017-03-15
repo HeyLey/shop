@@ -31,6 +31,8 @@
 <jsp:include page="top_menu.jsp"/>
 
 <div class="top-container">
+    <jsp:include page="main_menu.jsp"/>
+    <div class="data-container">
     <div class="basket">
         <c:forEach items="${basket.orders}" var="order">
             <div style="display: inline-block;">
@@ -50,7 +52,7 @@
         </c:otherwise>
     </c:choose>
 
-
+    </div>
 </div>
 </body>
 </html>

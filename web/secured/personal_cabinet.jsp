@@ -15,8 +15,11 @@
 <jsp:include page="../top_menu.jsp"/>
 
 <div class="top-container">
+    <jsp:include page="../main_menu.jsp"/>
+    <div class="data-container">
     <div class="big-text"> Пользователь ${pageContext.request.userPrincipal.name}</div>
     <div class="big-text"> Номер вкладки поумолчанию: ${initParam["default-tab"]}</div>
+    </div>
 </div>
 </body>
 </html>

@@ -7,5 +7,6 @@
 <body>
 <%session.invalidate();%>
 <h1>Успешный выход</h1>
+<a href="/products_page.jsp">Список продуктов</a><br/>
 </body>
 </html>

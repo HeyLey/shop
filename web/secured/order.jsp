@@ -23,6 +23,8 @@
 <jsp:include page="../top_menu.jsp"/>
 
 <div class="top-container">
+    <jsp:include page="../main_menu.jsp"/>
+    <div class="data-container">
     <h1>Ваш заказ</h1>
     <div class="basket">
         <c:forEach items="${basket.orders}" var="order">
@@ -43,6 +45,7 @@
     </p>
 
     <button onclick="make_order()">Оформить заказ</button>
+    </div>
 </div>
 </body>
 </html>
