@@ -9,6 +9,7 @@ import java.util.Set;
 @Entity
 @Table(name = "USER_ORDER", uniqueConstraints = {@UniqueConstraint(columnNames = "ID"),})
 public class UserOrder implements Serializable {
+    //обращение к таблицам
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "ID")

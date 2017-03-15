@@ -25,28 +25,27 @@
 <div class="top-container">
     <jsp:include page="../main_menu.jsp"/>
     <div class="data-container">
-    <h1>Ваш заказ</h1>
-    <div class="basket">
-        <c:forEach items="${basket.orders}" var="order">
-            <div style="display: inline-block;">
-                    ${order.product.name} <br/>
-                <img src="${order.product.img}" class="small-img"/> <br/>
-                Количество:<c:out value="${order.number}"/> <br/>
-                <hr>
-            </div>
-        </c:forEach>
+        <h1>Ваш заказ</h1>
+        <div class="basket">
+            <c:forEach items="${basket.orders}" var="order">
+                <div style="display: inline-block;">
+                        ${order.product.name} <br/>
+                    <img src="${order.product.img}" class="small-img"/> <br/>
+                    Количество:<c:out value="${order.number}"/> <br/>
+                    <hr>
+                </div>
+            </c:forEach>
+        </div>
+        <h2>Выберети магазин</h2>
+
+        <div id="map"></div>
+
+        <form action="/secured/buy.jsp" method="post">
+            <input id = "radio1" type="radio" name="delivery" value="false">Самовывоз<br>
+            <input type="radio" name="delivery" value="true">Доставка курьером<br>
+            <textarea id = "address" name = "address" rows="4" cols="50">Aдрес</textarea><br/>
+            <input type="submit" class="small-buy-button" value="Buy">
+        </form>
     </div>
-    <h2>Выберети магазин</h2>
-
-    <div id="map"></div>
-
-    <p>Магазин:
-    <div id="shop_addres"></div>
-    </p>
-
-    <button onclick="make_order()">Оформить заказ</button>
-    </div>
-</div>
 </body>
 </html>
-

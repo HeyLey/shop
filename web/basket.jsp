@@ -33,25 +33,33 @@
 <div class="top-container">
     <jsp:include page="main_menu.jsp"/>
     <div class="data-container">
-    <div class="basket">
-        <c:forEach items="${basket.orders}" var="order">
-            <div style="display: inline-block;">
-                    ${order.product.name} <br/>
-                <img src="${order.product.img}" class="small-img"/> <br/>
-                Количество:<c:out value="${order.number}"/> <br/>
-            </div>
-        </c:forEach>
-    </div>
+        <div class="basket">
+            <c:forEach items="${basket.orders}" var="order">
+                <div style="display: inline-block;">
+                        ${order.product.name} <br/>
+                    <img src="${order.product.img}" class="small-img"/> <br/>
+                    Price: ${order.product.price} <br/>
+                    Количество:<c:out value="${order.number}"/> <br/>
+                </div>
+            </c:forEach>
+        </div>
 
-    <c:choose>
-        <c:when test="${empty pageContext.request.userPrincipal}">
-            <a href="secured/login.jsp">Авторизоваться</a>
-        </c:when>
-        <c:otherwise>
-            <a href="secured/order.jsp">Заказать</a>
-        </c:otherwise>
-    </c:choose>
+        <c:choose>
+            <c:when test="${empty basket.orders}">
+                <pre> Ваша корзина пуста. </pre>
+            </c:when>
+            <c:otherwise>
+                <c:choose>
+                    <c:when test="${empty pageContext.request.userPrincipal}">
+                        <a href="secured/login.jsp">Авторизоваться</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="secured/order.jsp">Заказать</a>
+                    </c:otherwise>
+                </c:choose>
 
+            </c:otherwise>
+        </c:choose>
     </div>
 </div>
 </body>

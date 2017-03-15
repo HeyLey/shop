@@ -1,9 +1,6 @@
 ymaps.ready(init);
 
-var shop_id = undefined;
-
 function init() {
-
     var myMap = new ymaps.Map("map", {
         center: [59.978288, 30.335000],
         zoom: 12
@@ -20,8 +17,9 @@ function init() {
 
     shop1.events.add(['balloonopen'
     ], function (e) {
+        $("#radio1").prop("checked", true);
         $("#shop_addres").text("ул. Харченко, 19");
-        shop_id = 1;
+        $("#address").val("ул. Харченко 19");
     });
 
     var shop2 = new ymaps.Placemark([59.970614, 30.318572], {
@@ -33,20 +31,12 @@ function init() {
 
     shop2.events.add(['balloonopen'
     ], function (e) {
+        $("#radio1").prop("checked", true);
         $("#shop_addres").text("ул. Профессора Попова, 4");
-        shop_id = 2;
+        $("#address").val("ул. Профессора Попова 4");
     });
 
     myMap.geoObjects
         .add(shop1)
         .add(shop2);
-}
-
-
-function make_order() {
-    if (shop_id) {
-
-    } else {
-        alert("Выберите магазин");
-    }
 }

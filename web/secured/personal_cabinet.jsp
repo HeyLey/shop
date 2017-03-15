@@ -17,9 +17,32 @@
 <div class="top-container">
     <jsp:include page="../main_menu.jsp"/>
     <div class="data-container">
-    <div class="big-text"> Пользователь ${pageContext.request.userPrincipal.name}</div>
-    <div class="big-text"> Номер вкладки поумолчанию: ${initParam["default-tab"]}</div>
+        <div class="big-text"> Добро пожаловать, ${pageContext.request.userPrincipal.name} !</div>
+        <div> Номер вкладки поумолчанию: ${initParam["default-tab"]}</div>
+        <div>
+            <jsp:useBean id="orders" class="org.leyla.hibernate.OrdersHistory"/>
+
+            <c:forEach var="order" items="${orders.getOrders(pageContext.request.userPrincipal.name)}">
+                <div class="item">
+                    <h2>Заказ</h2>
+                    Самовывоз: ${order.delivery}<br/>
+                    Адрес доставки: ${order.address}<br/>
+                    Время: ${order.time} <br/>
+                    <h2>Продукты</h2>
+                    <c:forEach items="${order.parts}" var="part">
+                        <div style="display: inline-block;">
+                                ${part.product.name} <br/>
+                            Price: ${part.product.price} <br/>
+
+                            <img src="${part.product.img}" class="small-img"/> <br/>
+                            Количество:<c:out value="${part.number}"/> <br/>
+                        </div>
+                    </c:forEach>
+                </div>
+                <hr>
+            </c:forEach>
+
+        </div>
     </div>
-</div>
 </body>
 </html>

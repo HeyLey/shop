@@ -26,6 +26,8 @@
     <br/>
     <jsp:getProperty name="product" property="description"/>
     <br/>
+    Price: <jsp:getProperty name="product" property="price"/>
+    <br/>
     <button type="button" class="small-buy-button" onclick="buyProduct(<jsp:getProperty name="product" property="id"/>)"><%= myres.getString("BUY_BUTTON") %>
     </button>
 </div>

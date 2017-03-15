@@ -21,7 +21,15 @@
                 <li><a href="/secured/personal_cabinet.jsp">Вход</a></li>
             </c:otherwise>
         </c:choose>
+
         <li><a href="/basket.jsp">Корзина</a></li>
-        <li><a>История</a></li>
+        <c:if test="${not empty basket.orders}">
+            <c:if test="${not empty pageContext.request.userPrincipal}">
+                <li><a href="/secured/order.jsp">Заказать</a></li>
+            </c:if>
+        </c:if>
+
+
     </ul>
 </div>
+

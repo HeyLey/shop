@@ -1,0 +1,63 @@
+package org.leyla;
+
+import org.hibernate.Session;
+import org.leyla.bean.Basket;
+import org.leyla.bean.OrderPart;
+import org.leyla.hibernate.HibernateUtil;
+import org.leyla.hibernate.Purchase;
+import org.leyla.hibernate.UserOrder;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+
+public class BuyTag extends SimpleTagSupport {
+    private String address;
+    private String delivery;
+    private String user;
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public void setDelivery(String delivery) {
+        this.delivery = delivery;
+    }
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void doTag() throws JspException, IOException {
+        Basket basket = (Basket) getJspContext().getAttribute("basket", PageContext.SESSION_SCOPE);
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        System.out.println("begin");
+
+        List<Purchase> purchases = new ArrayList<>();
+
+        for (OrderPart part : basket.getOrders()) {
+            Purchase p = new Purchase(part.getProduct().getId(), part.getProduct().getPrice(), part.getNumber());
+            session.save(p);
+            purchases.add(p);
+        }
+        Date date = new Date() ;
+
+        UserOrder order = new UserOrder();
+        order.setAddress(address);
+        order.setDelivery("true".equals(delivery));
+        order.setUserName(user);
+        order.setPurchases(new HashSet<>(purchases));
+        order.setTime(date.getTime());
+
+        session.save(order);
+        session.getTransaction().commit();
+        System.out.println("commit");
+
+        getJspContext().setAttribute("basket", null, PageContext.SESSION_SCOPE);
+    }
+}
