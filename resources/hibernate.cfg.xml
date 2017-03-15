@@ -13,8 +13,8 @@
         <!--/-->
 
         <!--ссылка на мапинг-->
-        <mapping resource="history.hbm.xml"/>
-
+        <mapping class="org.leyla.hibernate.Purchase"/>
+        <mapping class="org.leyla.hibernate.UserOrder"/>
     </session-factory>
 
 </hibernate-configuration>

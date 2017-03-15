@@ -1,8 +1,11 @@
-package org.leyla;
+package org.leyla.bean;
 
+
+import org.leyla.Product;
 
 public class OrderPart {
     private Product product;
+    private String color;
     private int number;
 
     public OrderPart() {

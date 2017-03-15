@@ -1,4 +1,7 @@
-package org.leyla;
+package org.leyla.bean;
+
+import org.leyla.Product;
+import org.leyla.ProductsProvider;
 
 import java.util.ArrayList;
 import java.util.List;
