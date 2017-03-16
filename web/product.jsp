@@ -16,7 +16,7 @@
 <div class="product-preview-div">
     <br/>
     <br/>
-    <jsp:getProperty name="product" property="name"/>
+    <jsp:getProperty name="product" property="name"/> <br/>
     <!-- ссылка на карточку продукта -->
     <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>">
         <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>

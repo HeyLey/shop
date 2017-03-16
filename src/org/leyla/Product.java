@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
     private int id;
+    private Gender gender;
+    private Categories category;
     private String name;
     private String description;
     private String longDescription;
@@ -22,9 +24,22 @@ public class Product implements Serializable {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.longDescription = "";
         this.price = price;
         this.img = img;
         this.img_ = img_;
+    }
+
+    public Product male(Categories category) {
+        gender = Gender.FOR_MEN;
+        this.category = category;
+        return this;
+    }
+
+    public Product fermale(Categories category) {
+        gender = Gender.FOR_WOMEN;
+        this.category = category;
+        return this;
     }
 
     public Product withCloseSize() {
@@ -130,5 +145,15 @@ public class Product implements Serializable {
 
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
+    }
+
+    public boolean fromCategory(Gender gender, Categories category) {
+        if (gender != null && gender != this.gender) {
+            return false;
+        }
+        if (category != null && category != this.category) {
+            return false;
+        }
+        return true;
     }
 }
