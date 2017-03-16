@@ -14,7 +14,13 @@
 <jsp:include page="../top_menu.jsp"/>
 
 <div class="top-container">
-    <div class="big-text">Заказ успешно оформлен</div>
+        <jsp:include page="../main_menu.jsp"/>
+    <div class="data-container">
+        <div class="big-text">Заказ успешно оформлен.</div> <br/><pre>
+Ожидайте звонка оператора.
+История заказов доступна в личном кабинете. </pre>
+    </div>
+
 </div>
 
 </body>

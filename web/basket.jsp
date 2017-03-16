@@ -38,8 +38,8 @@
                 <div style="display: inline-block;">
                         ${order.product.name} <br/>
                     <img src="${order.product.img}" class="small-img"/> <br/>
-                    Price: ${order.product.price} <br/>
-                    Количество:<c:out value="${order.number}"/> <br/>
+                    Цена: ${order.product.price} руб.<br/>
+                    Количество: <c:out value="${order.number}"/> <br/>  <br/> <br/> <br/> 
                 </div>
             </c:forEach>
         </div>

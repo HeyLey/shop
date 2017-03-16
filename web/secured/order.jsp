@@ -36,15 +36,19 @@
                 </div>
             </c:forEach>
         </div>
-        <h2>Выберети магазин</h2>
 
-        <div id="map"></div>
 
         <form action="/secured/buy.jsp" method="post">
-            <input id = "radio1" type="radio" name="delivery" value="false">Самовывоз<br>
-            <input type="radio" name="delivery" value="true">Доставка курьером<br>
-            <textarea id = "address" name = "address" rows="4" cols="50">Aдрес</textarea><br/>
-            <input type="submit" class="small-buy-button" value="Buy">
+            <br/><br/>
+            <input id = "radio1" type="radio" name="delivery" value="false"> Самовывоз<br> <br/>
+            <h2>Выберете магазин на карте</h2>
+            <div id="map"></div> <br/><br/><br/>
+            <input type="radio" name="delivery" value="true"> Доставка курьером<br> <br/> <br/>
+            <pre>
+При выборе пункта "доставка курьером" укажите в поле ниже Ваш подробный адрес,
+включая индекс, а также Ваш номер телефона.</pre> <br/>
+            <textarea id = "address" name = "address" rows="4" cols="50">Адрес доставки</textarea><br/> <br/> <br/>
+            <input type="submit" class="small-buy-button" value="Заказать">
         </form>
     </div>
 </body>
