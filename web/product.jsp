@@ -18,8 +18,9 @@
     <br/>
     <jsp:getProperty name="product" property="name"/>
     <!-- ссылка на карточку продукта -->
-    <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>">
-        <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
+    <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>"> <br/>
+
+    <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
     <br/>
     Цена: <jsp:getProperty name="product" property="price"/> руб.
     <br/>
