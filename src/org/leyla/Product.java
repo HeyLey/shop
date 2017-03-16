@@ -37,7 +37,7 @@ public class Product implements Serializable {
     }
 
     public Product fermale(Categories category) {
-        gender = Gender.FOR_WOMEN;
+        gender = Gender.FOR_WOMAN;
         this.category = category;
         return this;
     }

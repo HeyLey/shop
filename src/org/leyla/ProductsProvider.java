@@ -27,7 +27,7 @@ public class ProductsProvider {
                         "Узор: Однотонный\n" +
                         "Артикул: MP002XW1GJ08")
                 .withColor("Зеленый", "Коричневый", "Красный")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_COAT)
                 .withCloseSize();
 
         addProduct("Куртка кожаная Karl Lagerfeld", "Куртка Karl Lagerfeld выполнена из коровьей кожи. Модель приталенного кроя.", 64999, "/img/img11.png", "/img/img11.jpg")
@@ -53,7 +53,7 @@ public class ProductsProvider {
                         "Карманы: 4\n" +
                         "Артикул: KA025EWOXV48")
                 .withColor("Серебристый", "Золотой", "Бронза")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_COAT)
                 .withCloseSize();
 
         addProduct("Пальто Weekend Max Mara", "Двухстороннее пальто Weekend Max Mara выполнено из мягкого материала с высоким содержанием шерсти. Модель прямого кроя.", 59999, "/img/img12.png", "/img/img12.jpg")
@@ -81,7 +81,7 @@ public class ProductsProvider {
                         "Карманы: 2\n" +
                         "Артикул: WE017EWORB56")
                 .withColor("Красный", "Синий", "Черный")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_COAT)
                 .withCloseSize();
 
         addProduct("Платье To be Bride", "Телесный подклад. Цветочный орнамент.", 69700, "/img/img16.png", "/img/img16.jpg")
@@ -98,7 +98,7 @@ public class ProductsProvider {
                         "Узор: Цветочный\n" +
                         "Артикул: MP002XW0DPA9")
                 .withColor("Черно-бежевый", "Сине-бежевый", "Бежевый")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_DRESS)
                 .withCloseSize();
 
         addProduct("Платье Фламенко Michal Nergin", "Длинное вечернее платье Фламенко на брителях с кружевной оттелкой. \nЗолотисный цветочный орнамент в викторианском стиле, украшенный кристаллами Swarovski. Крой - А-силуэт. \nВерх платья из плотной эластичной ткани, ниже бедра полупрозрачная сетка с кружевными вставками.", 110900, "/img/img17.png", "/img/img17.jpg")
@@ -115,7 +115,7 @@ public class ProductsProvider {
                         "Детали: одежды сетка, камни/стразы\n" +
                         "Узор: Цветочный\n" +
                         "Артикул: MP002XW1GIXJ")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_DRESS)
                 .withColor("Черно-золотистый", "Черно-серебристый", "Серебристо-золотой")
                 .withCloseSize();
 
@@ -142,22 +142,22 @@ public class ProductsProvider {
                         "Вырез/воротник: Отложной\n" +
                         "Назначение платья: Повседневное\n" +
                         "Артикул: RE025EWOGF65")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_DRESS)
                 .withColor("Черный", "Синий", "Красный")
                 .withCloseSize();
 
         addProduct("Туфли Casadei", "47 499 руб.", 47499, "/img/img22.png", "/img/img22.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_SHOES)
                 .withColor("Розово-красный", "Розово-синий", "Розово-зеленый")
                 .withShoeSize();
 
         addProduct("Туфли Nando Muzi", "33 999 руб.", 33999, "/img/img23.png", "/img/img23.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_SHOES)
                 .withColor("Черный", "Серый", "Белый")
                 .withShoeSize();
 
         addProduct("Туфли Loriblu", "32 999 руб.", 32999, "/img/img24.png", "/img/img24.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_SHOES)
                 .withColor("Синий", "Розовый", "Желтый")
                 .withShoeSize();
 
@@ -177,79 +177,79 @@ public class ProductsProvider {
                 .withCloseSize();
 
         addProduct("Юбка Twin-Set Simona Barbieri", "25 599 руб.", 25599, "/img/img4.png", "/img/img4.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_SKIRT)
                 .withColor("Серый", "Черный", "Бежевый")
                 .withCloseSize();
 
         addProduct("Юбка Elisabetta Franchi", "15 999 руб.", 15999, "/img/img5.png", "/img/img5.jpg")
-                .fermale(Categories.WOMEN_SKIRT)
+                .fermale(Categories.WOMAN_SKIRT)
                 .withColor("Красный", "Черный", "Синий")
                 .withCloseSize();
 
         addProduct("Юбка Elmira Markes", "14 100 руб.", 14100, "/img/img6.png", "/img/img6.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_SKIRT)
                 .withColor("Черный", "Серебристый", "Золотой")
                 .withCloseSize();
 
         addProduct("Брюки Boutique Moschino", "28 499 руб.", 28499, "/img/img31.png", "/img/img31.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_PANTS)
                 .withColor("Желтый", "Розовый", "Голубой")
                 .withCloseSize();
 
         addProduct("Брюки French Connection", "26 999 руб.", 26999, "/img/img32.png", "/img/img32.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_PANTS)
                 .withColor("Коричневый", "Красный", "Черный")
                 .withCloseSize();
 
         addProduct("Брюки Max&Co", "19 999 руб.", 19999, "/img/img33.png", "/img/img33.jpg")
-                .fermale(Categories.WOMAN_BLOUSE)
+                .fermale(Categories.WOMAN_PANTS)
                 .withColor("Бордовый", "Черный", "Синий")
                 .withCloseSize();
 
         // -----------------------------------
 
         addProduct("Рубашка Just Cavalli", "19 999 руб.", 19999, "/img/img7.png", "/img/img7.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHIRT)
                 .withColor("Черный", "Синий", "Серый")
                 .withCloseSize();
 
         addProduct("Рубашка Love Moschino", "14 999 руб.", 14999, "/img/img8.png", "/img/img8.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHIRT)
                 .withColor("Белый", "Черный", "Серый")
                 .withCloseSize();
 
         addProduct("Рубашка NIGHT RIDE Affliction", "11 499 руб.", 11499, "/img/img9.png", "/img/img9.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHIRT)
                 .withColor("Красный", "Серый", "Черный")
                 .withCloseSize();
 
         addProduct("Пуховик Woolrich", "82 199 руб.", 82199, "/img/img13.png", "/img/img13.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_COAT)
                 .withColor("Черный", "Зеленый", "Коричневый")
                 .withCloseSize();
 
         addProduct("Дубленка Mondial", "69 900 руб.", 69900, "/img/img14.png", "/img/img14.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_COAT)
                 .withColor("Черный", "Коричневый", "Бежевый")
                 .withCloseSize();
 
         addProduct("Пуховик C.P. Company", "53 899 руб.", 53899, "/img/img15.png", "/img/img15.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_COAT)
                 .withColor("Красный", "Синий", "Черный")
                 .withCloseSize();
 
         addProduct("Брюки спортивные Markus Lupfer", "27 399 руб.", 27399, "/img/img19.png", "/img/img19.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_PANTS)
                 .withColor("Черно-серый", "Черно-синий", "Черно-белый")
                 .withCloseSize();
 
         addProduct("Брюки Boss", "21 000 руб.", 21000, "/img/img20.png", "/img/img20.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_PANTS)
                 .withColor("Черный", "Серый", "Белый")
                 .withCloseSize();
 
         addProduct("Чиносы Iceberg", "16 299 руб.", 16299, "/img/img21.png", "/img/img21.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_PANTS)
                 .withColor("Белый", "Серый", "Синий")
                 .withCloseSize();
 
@@ -269,32 +269,32 @@ public class ProductsProvider {
                 .withCloseSize();
 
         addProduct("Лоферы Roberto Cavalli", "39 999 руб.", 39999, "/img/img28.png", "/img/img28.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHOES)
                 .withColor("Черный", "Серый", "Коричневый")
                 .withShoeSize();
 
         addProduct("Туфли Roberto Botticelli", "49 399 руб.", 49399, "/img/img29.png", "/img/img29.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHOES)
                 .withColor("Черный", "Коричневый", "Бежевый")
                 .withShoeSize();
 
         addProduct("Туфли Moma", "29 999 руб.", 29999, "/img/img30.png", "/img/img30.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_SHOES)
                 .withColor("Синий", "Черный", "Белый")
                 .withShoeSize();
 
         addProduct("Футболка Plein Sport", "24 499 руб.", 24499, "/img/img34.png", "/img/img34.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_POLO)
                 .withColor("Белый", "Черный", "Красный")
                 .withCloseSize();
 
         addProduct("Поло Love Moschino", "18 999 руб.", 18999, "/img/img35.png", "/img/img35.jpg")
-                .male(Categories.MEN_JACKET)
+                .male(Categories.MEN_POLO)
                 .withColor("Красный", "Синий", "Зеленый")
                 .withCloseSize();
 
         addProduct("Футболка Versace Jeans", "14 499 руб.", 14499, "/img/img36.png", "/img/img36.jpg")
-                .male(Categories.MEN_COAT)
+                .male(Categories.MEN_POLO)
                 .withColor("Зеленый", "Желтый", "Синий")
                 .withCloseSize();
     }
@@ -316,7 +316,7 @@ public class ProductsProvider {
 
         if (categoryStr != null) {
             if ("FOR_WOMEN".equals(categoryStr)) {
-                gender = Gender.FOR_WOMEN;
+                gender = Gender.FOR_WOMAN;
             }
             if ("FOR_MEN".equals(categoryStr)) {
                 gender = Gender.FOR_MEN;
