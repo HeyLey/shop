@@ -8,3 +8,15 @@ $(document).ready(function() {
         $(tab).fadeIn();
     });
 } );
+
+function comment(product_id) {
+    var message = $('#comment').val();
+    $.get("/comment?text=" + message + '&product_id=' + product_id, function( data ) {
+        $("#comments").html(data);
+        $('#comment').val("");
+    });
+}
+
+function buyProduct(id) {
+    window.location.href = ("/basket.jsp?order_id=" + id);
+}

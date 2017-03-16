@@ -3,6 +3,8 @@ package org.leyla;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import org.hibernate.Session;
+import org.leyla.hibernate.HibernateUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +33,7 @@ public class ProductServlet extends HttpServlet {
 
         Integer id = Integer.valueOf(request.getParameter("id"));;
 
-        Map<String, Object> data = fillData(locale, id);
+        Map<String, Object> data = fillData(locale, id, request.isUserInRole("tomcat"));
 
         PrintWriter out = response.getWriter();
         Configuration cfg = new Configuration();
@@ -48,8 +50,8 @@ public class ProductServlet extends HttpServlet {
         out.close();
     }
 
-    private Map<String, Object> fillData(Locale locale, int id) {
-       // int defaultTab = Integer.valueOf(getInitParameter("default-tab"));
+    private Map<String, Object> fillData(Locale locale, int id, boolean logged) {
+        // int defaultTab = Integer.valueOf(getInitParameter("default-tab"));
         int defaultTab = Integer.valueOf(getServletContext().getInitParameter("default-tab"));
         ResourceBundle myres = ResourceBundle.getBundle("messages", locale);
 
@@ -57,6 +59,12 @@ public class ProductServlet extends HttpServlet {
 
         HashMap<String, Object> map = new HashMap<>();
 
+        map.put("userLogged", logged);
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        StringBuilder comments = CommentServlet.getComments(session, locale, String.valueOf(product.getId()));
+
+        map.put("comments", comments);
         map.put("product_id", product.getId());
         map.put("product_name", product.getName());
         map.put("product_description", product.getDescription());

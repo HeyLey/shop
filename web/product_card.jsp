@@ -4,6 +4,7 @@
     <title>Карточка продукта</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/scripts/tabs.js"></script>
 </head>
 <body>
 <jsp:include page="top_menu.jsp"/>

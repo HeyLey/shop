@@ -8,30 +8,47 @@ public class Product implements Serializable {
     private int id;
     private String name;
     private String description;
-   // private String description_;
+    private String longDescription;
     private int price;
     private String img;
     private String img_;
     String[] colors = new String[3];
-    String[] sizes = new String[3];
+    String[] sizes = new String[0];
 
     public Product() {
     }
 
-    public Product(int id, String name, String description, /*String description_,*/ int price, String img, String img_, String color1, String color2, String color3, String s1, String s2, String s3) {
+    public Product(int id, String name, String description, int price, String img, String img_) {
         this.id = id;
         this.name = name;
         this.description = description;
-      //  this.description = description_;
         this.price = price;
         this.img = img;
         this.img_ = img_;
-        colors[0] = color1;
-        colors[1] = color2;
-        colors[2] = color3;
+    }
+
+    public Product withCloseSize() {
+        return withSizes("S", "M", "L");
+    }
+
+    public Product withShoeSize() {
+        return withSizes("37", "38", "39");
+    }
+
+    public Product withSizes(String s1, String s2, String s3) {
+        sizes = new String[3];
         sizes[0] = s1;
         sizes[1] = s2;
         sizes[2] = s3;
+        return this;
+    }
+
+    public Product withColor(String c1, String c2, String c3) {
+        colors = new String[3];
+        colors[0] = c1;
+        colors[1] = c2;
+        colors[2] = c3;
+        return this;
     }
 
     public int getId() {
@@ -63,7 +80,7 @@ public class Product implements Serializable {
     }
 
     //public String getDescription_() {
-      //  return description_;
+    //  return description_;
     //}
 
     public void setDescription(String description) {
@@ -100,5 +117,10 @@ public class Product implements Serializable {
 
     public String getColor(int i) {
         return colors[i];
+    }
+
+    public Product withLongDescription(String text) {
+        longDescription = text;
+        return this;
     }
 }

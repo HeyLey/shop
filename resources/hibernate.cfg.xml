@@ -15,6 +15,7 @@
         <!--ссылка на мапинг-->
         <mapping class="org.leyla.hibernate.Purchase"/>
         <mapping class="org.leyla.hibernate.UserOrder"/>
+        <mapping class="org.leyla.hibernate.Comment"/>
     </session-factory>
 
 </hibernate-configuration>
