@@ -123,4 +123,12 @@ public class Product implements Serializable {
         longDescription = text;
         return this;
     }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
+    }
 }

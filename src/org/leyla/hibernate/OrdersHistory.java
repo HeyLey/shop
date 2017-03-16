@@ -28,9 +28,10 @@ public class OrdersHistory {
                     time);
 
             List<OrderPart> parts = orderBean.getParts();
+            int i = 0;
             for (Purchase purchase : order.getPurchases()) {
                 Product product = ProductsProvider.getProduct(purchase.getProductId());
-                parts.add(new OrderPart(product, purchase.getNumber()));
+                parts.add(new OrderPart(i++, product, purchase.getNumber(), purchase.getColor(), purchase.getSize()));
             }
             result.add(orderBean);
         }

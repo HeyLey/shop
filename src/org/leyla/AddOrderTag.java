@@ -6,11 +6,24 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 import org.leyla.bean.Basket;
 
+// добавление в корзину через jsp
+
 public class AddOrderTag extends SimpleTagSupport {
     private String id;
+    private String color;
+    private String size;
+
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public void doTag() throws JspException, IOException {
@@ -26,6 +39,8 @@ public class AddOrderTag extends SimpleTagSupport {
             basket = new Basket();
             getJspContext().setAttribute("basket", basket, PageContext.SESSION_SCOPE);
         }
-        basket.addOrder(id);
+        basket.addOrder(id, color, size);
     }
+
+
 }

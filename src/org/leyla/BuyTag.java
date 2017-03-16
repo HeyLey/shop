@@ -36,6 +36,7 @@ public class BuyTag extends SimpleTagSupport {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
+
         System.out.println("begin");
 
         List<Purchase> purchases = new ArrayList<>();
@@ -45,14 +46,10 @@ public class BuyTag extends SimpleTagSupport {
             session.save(p);
             purchases.add(p);
         }
-        Date date = new Date() ;
 
-        UserOrder order = new UserOrder();
-        order.setAddress(address);
-        order.setDelivery("true".equals(delivery));
-        order.setUserName(user);
+
+        UserOrder order = new UserOrder(user, "true".equals(delivery), address);
         order.setPurchases(new HashSet<>(purchases));
-        order.setTime(date.getTime());
 
         session.save(order);
         session.getTransaction().commit();

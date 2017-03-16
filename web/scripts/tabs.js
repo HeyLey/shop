@@ -16,7 +16,3 @@ function comment(product_id) {
         $('#comment').val("");
     });
 }
-
-function buyProduct(id) {
-    window.location.href = ("/basket.jsp?order_id=" + id);
-}

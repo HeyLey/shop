@@ -31,12 +31,15 @@
                 <div style="display: inline-block;">
                         ${order.product.name} <br/>
                     <img src="${order.product.img}" class="small-img"/> <br/>
+                    Цвет: ${order.color}<br/>
+                    Размер: ${order.size}<br/>
                     Количество:<c:out value="${order.number}"/> <br/>
                     <hr>
                 </div>
             </c:forEach>
-        </div>
 
+        </div>
+        <div class="big-text">Общая сумма: ${basket.totalPrice}</div>
 
         <form action="/secured/buy.jsp" method="post">
             <br/><br/>
@@ -46,7 +49,7 @@
             <input type="radio" name="delivery" value="true"> Доставка курьером<br> <br/> <br/>
 
 При выборе пункта "доставка курьером" укажите в поле ниже Ваш подробный адрес, включая индекс.
-<br/>
+            <br/> <br/>
             <textarea id = "address" name = "address" rows="4" cols="50">Адрес доставки</textarea><br/> <br/> <br/>
             <input type="submit" class="small-buy-button" value="Заказать">
         </form>

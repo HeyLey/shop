@@ -18,15 +18,15 @@
     <br/>
     <jsp:getProperty name="product" property="name"/>
     <!-- ссылка на карточку продукта -->
-    <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>"> <br/>
-
-    <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
+    <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>">
+        <img src="<jsp:getProperty name="product" property="img"/>" class="small-img"/></a>
     <br/>
     Цена: <jsp:getProperty name="product" property="price"/> руб.
     <br/>
     <br/>
-    <button type="button" class="small-buy-button" onclick="buyProduct(<jsp:getProperty name="product" property="id"/>)"><%= myres.getString("BUY_BUTTON") %>
-    </button>
+    <a href="/product_card.jsp?id=<jsp:getProperty name="product" property="id"/>">
+        <%= myres.getString("BUY_BUTTON") %>
+    </a>
     <br/>
     <br/>
     <br/>

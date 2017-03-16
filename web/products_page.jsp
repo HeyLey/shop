@@ -31,13 +31,6 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/filter_input.js"></script>
-    <script>
-        lang = "<%= locale.getLanguage() %>";
-
-        function buyProduct(id) {
-            window.location.href = ("/basket.jsp?order_id=" + id);
-        }
-    </script>
 </head>
 <body>
 <jsp:include page="top_menu.jsp"/>

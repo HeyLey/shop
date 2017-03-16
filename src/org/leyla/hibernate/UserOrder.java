@@ -3,6 +3,7 @@ package org.leyla.hibernate;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 
 
@@ -32,6 +33,14 @@ public class UserOrder implements Serializable {
     private Set<Purchase> purchases;
 
     public UserOrder() {
+    }
+
+    public UserOrder(String userName, boolean delivery, String address) {
+        this.userName = userName;
+        this.delivery = delivery;
+        this.address = address;
+
+        setTime(new Date().getTime());
     }
 
     public Integer getId() {

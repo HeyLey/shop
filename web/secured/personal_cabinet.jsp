@@ -42,14 +42,22 @@
             <c:forEach var="order" items="${orders.getOrders(pageContext.request.userPrincipal.name)}">
                 <div class="item">
                     <h2>Заказ</h2>
-                    Самовывоз: ${order.delivery}<br/>
+                    <c:choose>
+                        <c:when test="${order.delivery}">
+                            Доставка курьером
+                        </c:when>
+                        <c:otherwise>
+                            Самовывоз
+                        </c:otherwise>
+                    </c:choose>
+                    <br/>
                     Адрес доставки: ${order.address}<br/>
                     Время: ${order.time} <br/>
                     <h2>Продукты</h2>
                     <c:forEach items="${order.parts}" var="part">
                         <div style="display: inline-block;">
                                 ${part.product.name} <br/>
-                            Цена: ${part.product.price} руб.<br/>
+                            Цена: ${part.product.price} <br/>
 
                             <img src="${part.product.img}" class="small-img"/> <br/>
                             Количество:<c:out value="${part.number}"/> <br/>

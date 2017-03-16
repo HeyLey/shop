@@ -18,6 +18,8 @@ public class Purchase implements Serializable {
     @Column(name = "COLOR")
     private String color;
 
+    @Column(name = "SZ")
+    private String size;
 
     @Column(name = "PRICE")
     private double price;
@@ -65,4 +67,21 @@ public class Purchase implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
+

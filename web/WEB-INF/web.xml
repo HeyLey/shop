@@ -42,6 +42,17 @@
         <url-pattern>/comment</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>RemoveFromBasetServlet</servlet-name>
+        <servlet-class>org.leyla.RemoveFromBasetServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveFromBasetServlet</servlet-name>
+        <url-pattern>/remove</url-pattern>
+    </servlet-mapping>
+
     <!--авторизация-->
     <security-constraint>
         <web-resource-collection>
