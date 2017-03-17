@@ -20,7 +20,7 @@ public class OrdersHistory {
             UserOrder order = (UserOrder) obj;
 
             String time = (new Date(order.getTime())).toString();
-            int id = j;
+            int id = j++;
             OrderBean orderBean = new OrderBean(
                     id,
                     order.getUserName(),
