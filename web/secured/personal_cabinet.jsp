@@ -53,14 +53,14 @@
                     <br/>
                     Адрес доставки: ${order.address}<br/>
                     Время: ${order.time} <br/>
-                    <h2>Продукты</h2>
+                    <h2>Товары</h2>
                     <c:forEach items="${order.parts}" var="part">
                         <div style="display: inline-block;">
                                 ${part.product.name} <br/>
-                            Цена: ${part.product.price} <br/>
+                            Цена: ${part.product.price} руб.<br/>
 
                             <img src="${part.product.img}" class="small-img"/> <br/>
-                            Количество:<c:out value="${part.number}"/> <br/>
+                            Количество: <c:out value="${part.number}"/> <br/>
                         </div>
                     </c:forEach>
                 </div>

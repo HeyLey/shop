@@ -48,7 +48,7 @@
             <textarea id="comment" rows="4" cols="50"></textarea><br/><br/><br/>
             <button is="submit" class="small-buy-button" onclick="comment(${product_id})">Комментировать</button>
         <#else>
-            <p>Вам нужно авторизоваться что бы оставлять комментарии </p>
+            <p>Вам нужно авторизоваться, чтобы оставлять комментарии.</p>
         </#if>
         </div>
     </div>

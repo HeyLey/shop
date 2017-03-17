@@ -51,13 +51,13 @@
                 </div>
             </c:forEach>
         </div>
-        <div class="big-text">Общая сумма: ${basket.totalPrice} руб.</div> <br/> <br/> <br/>
 
         <c:choose>
             <c:when test="${empty basket.orders}">
                 <pre> Ваша корзина пуста. </pre>
             </c:when>
             <c:otherwise>
+                <div class="big-text">Общая сумма: ${basket.totalPrice} руб.</div> <br/> <br/> <br/>
                 <c:choose>
                     <c:when test="${empty pageContext.request.userPrincipal}">
                         <a href="secured/login.jsp">Авторизоваться</a>
