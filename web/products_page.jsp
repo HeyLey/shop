@@ -39,7 +39,7 @@
     <jsp:include page="main_menu.jsp"/>
 
     <div class="data-container">
-        <p>Фильтр: <input id="filter_input" type="text" value="<%= query != null ? query : ""%>"/></p>
+        <p><%= myres.getString("FILTER") %>: <input id="filter_input" type="text" value="<%= query != null ? query : ""%>"/></p>
         <div id="products-list">
             <jsp:include page="/products_list.jsp"/>
         </div>

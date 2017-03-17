@@ -16,6 +16,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
+//тэг для заказака с jsp страницы, добавлят в бд
 public class BuyTag extends SimpleTagSupport {
     private String address;
     private String delivery;

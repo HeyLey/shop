@@ -6,12 +6,12 @@
             <div class="product-header">${product_name}</div>
             <div class="price">${product_price}</div>
             <div class="main-param">
-                Цвет: <select name="color">
+            ${color}: <select name="color">
                 <option value="${product_color1}">${product_color1}</option>
                 <option value="${product_color2}">${product_color2}</option>
                 <option value="${product_color3}">${product_color3}</option>
             </select><br/>
-                Размер:
+            ${size}:
                 <select name="sz">
                     <option value="${s1}">${s1}</option>
                     <option value="${s2}">${s2}</option>
@@ -19,7 +19,7 @@
                 </select><br/>
             </div>
             <div class="size_tab">
-                <a href="/menu/size_table.jsp">Таблица размеров</a>
+                <a href="/menu/size_table.jsp">${size_table}</a>
             </div>
 
             <input type="hidden" name="product_id" value="${product_id}">

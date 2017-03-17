@@ -3,6 +3,23 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ taglib prefix="ex" uri="/WEB-INF/custom.tld" %>
 
+<c:if test="${empty sessionScope.lang}">
+    <fmt:setLocale value="ru"/>
+</c:if>
+
+<c:if test="${sessionScope.lang eq 'ru'}">
+    <fmt:setLocale value="ru"/>
+</c:if>
+
+<c:if test="${sessionScope.lang eq 'en'}">
+    <fmt:setLocale value="en"/>
+</c:if>
+
+<c:if test="${sessionScope.lang eq 'de'}">
+    <fmt:setLocale value="de"/>
+</c:if>
+
+<fmt:setBundle basename="/messages"/>
 
 <ex:add_order id="${param.order_id}"/>
 
@@ -21,7 +38,7 @@
     <div class="data-container"> <pre>
         <div id="datetime" class="big-text" style="text-align: right"></div>
         <div class="big-text">
-     Добро пожаловать, ${pageContext.request.userPrincipal.name}!</div>
+     <fmt:message key="WELLCOME"/>, ${pageContext.request.userPrincipal.name}!</div>
         <div>
         Номер вкладки по умолчанию: ${initParam["default-tab"]}</div>
 
@@ -57,10 +74,10 @@
                     <c:forEach items="${order.parts}" var="part">
                         <div style="display: inline-block;">
                                 ${part.product.name} <br/>
-                            Цена: ${part.product.price} руб.<br/>
+                            <fmt:message key="PRICE"/>: ${part.product.price}  <fmt:message key="RUB"/>.<br/>
 
                             <img src="${part.product.img}" class="small-img"/> <br/>
-                            Количество: <c:out value="${part.number}"/> <br/>
+                            <fmt:message key="NUMBER"/>: <c:out value="${part.number}"/> <br/>
                         </div>
                     </c:forEach>
                 </div>

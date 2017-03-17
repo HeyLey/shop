@@ -118,9 +118,8 @@
 
         <filter-name>LogFilter</filter-name>
 
-        <url-pattern>/auth.jsp</url-pattern>
+        <url-pattern>/*</url-pattern>
 
     </filter-mapping>
 </web-app>
-
 

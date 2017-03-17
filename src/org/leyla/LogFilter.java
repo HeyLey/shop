@@ -4,6 +4,7 @@ package org.leyla;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Collections;
 
 //логгирование действий пользователя
 
@@ -20,7 +21,14 @@ public class LogFilter implements Filter {
 
         String uri = httpReq.getRequestURI();
 
-        context.log("ip: " + ip + ", uri: " + uri);
+        StringBuilder builder = new StringBuilder();
+
+        for (String name : Collections.list(httpReq.getParameterNames())) {
+            builder.append(name).append(": ").append(httpReq.getParameter(name)).append("\n");
+        }
+
+        context.log("ip: " + ip + ", uri: " + uri + ", parameters: [\n" + builder +"]");
+
         filterChain.doFilter(request, response);
     }
 
@@ -28,3 +36,4 @@ public class LogFilter implements Filter {
         context = сonfig.getServletContext();
     }
 }
+

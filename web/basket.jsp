@@ -40,10 +40,10 @@
                 <div style="display: inline-block;">
                         ${order.product.name} <br/>
                     <img src="${order.product.img}" class="small-img"/> <br/>
-                    Цвет: ${order.color}<br/>
-                    Размер: ${order.size}<br/>
-                    Цена: ${order.product.price} руб.<br/>
-                    Количество: <c:out value="${order.number}"/> <br/> <br/>
+                    <fmt:message key="COLOR"/>: ${order.color}<br/>
+                    <fmt:message key="SIZE"/>: ${order.size}<br/>
+                    <fmt:message key="PRICE"/>: ${order.product.price} руб.<br/>
+                    <fmt:message key="NUMBER"/>: <c:out value="${order.number}"/> <br/> <br/>
                     <button class="small-buy-button" onclick="$.get('/remove?order_id=' + ${order.id}); window.location.href = '/basket.jsp';">
                         <fmt:message key="DELETE"/>
                     </button>
@@ -54,16 +54,16 @@
 
         <c:choose>
             <c:when test="${empty basket.orders}">
-                <pre> Ваша корзина пуста. </pre>
+                <pre> <fmt:message key="BASKET_IS_EMPTY"/> </pre>
             </c:when>
             <c:otherwise>
-                <div class="big-text">Общая сумма: ${basket.totalPrice} руб.</div> <br/> <br/> <br/>
+                <div class="big-text"><fmt:message key="TOTAL_PRICE"/>: ${basket.totalPrice} руб.</div> <br/> <br/> <br/>
                 <c:choose>
                     <c:when test="${empty pageContext.request.userPrincipal}">
-                        <a href="secured/login.jsp">Авторизоваться</a>
+                        <a href="secured/login.jsp"><fmt:message key="LOGIN"/></a>
                     </c:when>
                     <c:otherwise>
-                        <a href="secured/order.jsp">Заказать</a>
+                        <a href="secured/order.jsp"><fmt:message key="MAKE_ORDER"/></a>
                     </c:otherwise>
                 </c:choose>
 

@@ -88,6 +88,10 @@ public class ProductServlet extends HttpServlet {
         map.put("tab3_style", (defaultTab != 3) ? "style=\"display: none\"" : "");
 
         map.put("buy_button", myres.getString("BUY_BUTTON"));
+        map.put("color", myres.getString("COLOR"));
+        map.put("size", myres.getString("SIZE"));
+        map.put("size_table", myres.getString("SIZE_TABLE"));
+
 
         return map;
     }
