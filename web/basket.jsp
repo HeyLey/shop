@@ -43,7 +43,7 @@
                     Цвет: ${order.color}<br/>
                     Размер: ${order.size}<br/>
                     Цена: ${order.product.price} руб.<br/>
-                    Количество: <c:out value="${order.number}"/> <br/>
+                    Количество: <c:out value="${order.number}"/> <br/> <br/>
                     <button class="small-buy-button" onclick="$.get('/remove?order_id=' + ${order.id}); window.location.href = '/basket.jsp';">
                         <fmt:message key="DELETE"/>
                     </button>
@@ -51,7 +51,7 @@
                 </div>
             </c:forEach>
         </div>
-        <div class="big-text">Общая сумма: ${basket.totalPrice}</div>
+        <div class="big-text">Общая сумма: ${basket.totalPrice} руб.</div> <br/> <br/> <br/>
 
         <c:choose>
             <c:when test="${empty basket.orders}">

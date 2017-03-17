@@ -9,13 +9,15 @@ public class OrderBean {
     private String address;
     private boolean delivery;
     private String time;
+    private int id;
     private List<OrderPart> parts = new ArrayList<>();
 
-    public OrderBean(String userName, String address, boolean delivery, String time) {
+    public OrderBean(int id, String userName, String address, boolean delivery, String time) {
         this.userName = userName;
         this.address = address;
         this.delivery = delivery;
         this.time = time;
+        this.id = id;
     }
 
     public String getUserName() {
@@ -56,5 +58,13 @@ public class OrderBean {
 
     public void setDelivery(boolean delivery) {
         this.delivery = delivery;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

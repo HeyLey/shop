@@ -15,13 +15,14 @@ public class OrdersHistory {
         Session session = HibernateUtil.getSessionFactory().openSession();
 
         List<OrderBean> result = new ArrayList<>();
-
+        int j = 1;
         for (Object obj: session.createQuery("from UserOrder ").list()) {
             UserOrder order = (UserOrder) obj;
 
             String time = (new Date(order.getTime())).toString();
-
+            int id = j;
             OrderBean orderBean = new OrderBean(
+                    id,
                     order.getUserName(),
                     order.getAddress(),
                     order.isDelivery(),

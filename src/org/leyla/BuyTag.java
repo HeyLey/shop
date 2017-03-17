@@ -31,6 +31,7 @@ public class BuyTag extends SimpleTagSupport {
         this.user = user;
     }
 
+
     public void doTag() throws JspException, IOException {
         Basket basket = (Basket) getJspContext().getAttribute("basket", PageContext.SESSION_SCOPE);
 

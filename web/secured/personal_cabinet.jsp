@@ -41,7 +41,7 @@
 
             <c:forEach var="order" items="${orders.getOrders(pageContext.request.userPrincipal.name)}">
                 <div class="item">
-                    <h2>Заказ</h2>
+                    <h2>Заказ #${order.id}</h2>
                     <c:choose>
                         <c:when test="${order.delivery}">
                             Доставка курьером
